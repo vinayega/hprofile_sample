@@ -24,12 +24,12 @@ jobs:
       - name: Build and Upload image to ECR 
         uses: appleboy/docker-ecr-action@master
         with:
-        access_key: ${{ secrets.aws_access_key_id }}
-        secret_key: ${{ secrets.aws_secret_access_key }}
-        registry: ${{ secrets.registry }}
-        repo: sample-ecr-repo
-        region: us-east-1
-        auto_tag: true
-        daemon_off: false
-        dockerfile: ./Dockerfile
-        context: ./
+          access_key: ${{ secrets.aws_access_key_id }}
+          secret_key: ${{ secrets.aws_secret_access_key }}
+          registry: ${{ secrets.registry }}
+          repo: sample-ecr-repo
+          region: us-east-1
+          auto_tag: true
+          daemon_off: false
+          dockerfile: ./Dockerfile
+          context: ./
